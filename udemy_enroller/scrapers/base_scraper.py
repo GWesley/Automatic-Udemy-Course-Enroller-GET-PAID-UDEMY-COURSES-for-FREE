@@ -116,7 +116,7 @@ class BaseScraper(ABC):
         :param url: The url to check the udemy coupon pattern for
         :return: The validated url or None
         """
-        url_pattern = r"^https:\/\/www.udemy.com.*couponCode=.*$"
+        url_pattern = r"^.*https:\/\/www.udemy.com.*couponCode=.*$"
         matching = re.match(url_pattern, url)
         if matching is not None:
             matching = matching.group()
